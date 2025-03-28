@@ -10,9 +10,9 @@ interface Team {
   logo: string;
 }
 
-interface Props {
+/* interface Props {
   teams: Team[];
-}
+} */
 
 const PageWrapper = styled.div`
   display: flex;

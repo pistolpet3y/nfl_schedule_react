@@ -1,7 +1,7 @@
 import MainContent from '../components/MainContent';
 import React from 'react';
 import { Container } from '../components/styles/Container.styled';
-import { GlobalStyles } from '../components/styles/Global.styled';
+/* import { GlobalStyles } from '../components/styles/Global.styled'; */
 
 interface Team {
   displayName: string;
