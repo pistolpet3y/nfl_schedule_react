@@ -14,7 +14,7 @@ interface Team {
 
 
 const App: React.FC = () => {
-  const [teams, setTeams] = useState<Team[]>([]);
+  const [teams, /* setTeams */] = useState<Team[]>([]);
 
   const router = createHashRouter([
     {
@@ -22,7 +22,7 @@ const App: React.FC = () => {
       element: <Layout teams={teams} />,
       children: [
         { index: true, element: <HomePage teams={teams} /> },
-        { path: '/teams', element: <TeamsPage teams={teams} onDataFetch={setTeams} /> },
+        { path: '/teams', element: <TeamsPage /* teams={teams} onDataFetch={setTeams} */ /> },
       ],
     },
   ]);
