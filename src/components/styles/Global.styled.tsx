@@ -16,7 +16,7 @@ body {
   }
 
 body {
-  overflow-x: hidden; /* om du vill ta bort sidleds-scroll */
+  overflow-x: hidden; 
   scrollbar-width: thin;
   scrollbar-color: rgba(142, 197, 252, 0.78) rgba(0, 0, 0, 0.16);
 }
