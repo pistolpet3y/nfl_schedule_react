@@ -1,42 +1,28 @@
-import { useEffect,  } from 'react';
+import React from 'react';
+import { StyledTeamsPage } from './styles/TeamsPage.styled';
 
 interface Team {
   displayName: string;
   logo: string;
 }
 
-interface ApiData {
-  sports: {
-    leagues: {
-      teams: {
-        team: {
-          displayName: string;
-          logos: { href: string }[];
-        };
-      }[];
-    }[];
-  }[];
-}
-
 interface Props {
-  onDataFetch: (teams: Team[]) => void;
+  teams: Team[];
 }
 
-export default function TeamsContent({ onDataFetch }: Props) {
-  useEffect(() => {
-    console.log('fetching teams');
-    fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams')
-      .then((res) => res.json())
-      .then((data: ApiData) => {
-        const teams = data.sports[0].leagues[0].teams.map((t) => ({
-          displayName: t.team.displayName,
-          logo: t.team.logos[0]?.href || '',
-        }));
-         console.log('Fetched teams:', teams);
-        onDataFetch(teams);
-      });
-      
-  }, [onDataFetch]);
+const TeamsContent: React.FC<Props> = ({ teams }) => {
+  return (
+    <StyledTeamsPage>
+    <div className="teams-page">
+      {teams.map((team) => (
+        <div key={team.displayName}>
+          <img src={team.logo} alt={team.displayName}/>
+          <p>{team.displayName}</p>
+        </div>
+      ))}
+    </div>
+    </StyledTeamsPage>
+  );
+};
 
-  return null;
-}
+export default TeamsContent;

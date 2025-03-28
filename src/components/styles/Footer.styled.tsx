@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledFooter  =styled.footer`
 text-align: center;
-width: 100vw;
+width: 100%;
 background-color:rgba(0, 0, 0, 0.51);
 backdrop-filter: blur(4px);
 color: white;
@@ -10,15 +10,14 @@ text-align: center;
  box-sizing: border-box;
 
 .SocialMedia{
-padding-top: 40px;
-padding-bottom: 10px;
+padding-top: 20px;
+padding-bottom: 5px;
 display: flex;
 justify-content: center;
 gap: 40px;
 }
 
 .BuiltWith{
-margin: 0 auto;
 justify-content: center;
 align-items: center;
 }
@@ -42,7 +41,9 @@ transition: transform 0.3s ease-in-out;
 }
 
 p{
+line-height: .5rem;
 color: lightblue;
 font-size: 1.rem;
+margin-bottom: 2px;
 }
 `

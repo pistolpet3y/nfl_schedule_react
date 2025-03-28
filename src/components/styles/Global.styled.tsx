@@ -15,6 +15,22 @@ body {
   min-height: 100vh;
   }
 
+body {
+  overflow-x: hidden; /* om du vill ta bort sidleds-scroll */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(142, 197, 252, 0.78) rgba(0, 0, 0, 0.16);
+}
+
+/* Chrome-scrollbars */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(142, 197, 252, 0.78);
+  border-radius: 4px;
+}
+
+
 html, body, #root {
     height: 100%;
     margin: 0;

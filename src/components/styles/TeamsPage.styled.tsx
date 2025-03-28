@@ -1,24 +1,27 @@
 import styled from "styled-components";
 
+
 export const StyledTeamsPage = styled.nav`
   margin: 0 auto;
-  margin-top: 100px;
-  height: 700px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  max-width: 80%;
-  background-color:rgba(39, 39, 39, 0.32);
+  margin-top: 60px;
+  width: 80vw;
 
-
-  .scroll-container {
-  cursor: grab;
-  display: flex;
-  height: 300px;
-  scrollbar-gutter: stable;
-  scrollbar-width: thin;
-  scrollbar-color: #8EC5FC rgba(0, 0, 0, 0.2);
+  img {
+    width: 100px;
 }
+
+.teams-page{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+}
+
+p{
+line-height: 0.2rem;}
+
 `

@@ -1,6 +1,8 @@
 import React from 'react';
 import TeamsContent from '../components/TeamsContent'; 
-import { Container } from '../components/styles/Container.styled';
+import MainContent from '../components/MainContent';
+import { StyledTeamsPage } from '../components/styles/TeamsPage.styled'; 
+
 
 interface Team {
   displayName: string;
@@ -12,21 +14,16 @@ interface Team {
   onDataFetch: (teams: Team[]) => void;
 } 
 
-const TeamsPage: React.FC<Props> = ({ teams: _teams, onDataFetch }) => {
+const TeamsPage: React.FC<Props> = ({ teams }) => {
   return (
-    <Container>
-      <TeamsContent onDataFetch={onDataFetch} />
-    </Container>
+    <>
+      <MainContent />
+      <StyledTeamsPage>
+      <TeamsContent teams={teams} />
+      </StyledTeamsPage>
+    </>
   );
 }; 
-
-/* const TeamsPage: React.FC = () =>{
-    return (
-    <Container>
-      { <TeamsContent onDataFetch={onDataFetch} /> }
-    </Container>
-  );
-} */
 
 
 export default TeamsPage;

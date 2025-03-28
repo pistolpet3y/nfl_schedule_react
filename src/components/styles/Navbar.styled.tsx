@@ -9,7 +9,7 @@ export const StyledNavbar = styled.nav`
   align-items: center;
   white-space: nowrap;
   overflow-x: auto;
-  width: 100vw;
+  width: 100%;
   min-height: 60px;
   backdrop-filter: blur(6px);
 

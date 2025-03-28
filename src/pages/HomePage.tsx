@@ -1,6 +1,5 @@
 import MainContent from '../components/MainContent';
 import React from 'react';
-import { Container } from '../components/styles/Container.styled';
 /* import { GlobalStyles } from '../components/styles/Global.styled'; */
 
 interface Team {
@@ -17,10 +16,7 @@ const HomePage: React.FC<Props> = () => {
 
   return (
     <>
-    <Container>
-      
       <MainContent />
-    </Container>
     </>
   );
 };
