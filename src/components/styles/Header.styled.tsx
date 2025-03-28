@@ -10,6 +10,7 @@ export const StyledHeader  =styled.header`
   flex-direction: row;
   align-items: center;
   width: 100%;
+  height: 85px;
 
   h2 { 
     font-family: 'BebasFont', sans-serif;

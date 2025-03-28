@@ -39,13 +39,13 @@ const filteredTeams = useMemo(() => {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      minWidth: '80px',
+      minWidth: '100px',
       margin: '0 8px',
       color: 'white',
     }}
   >
-    <img src={team.logo} alt={team.displayName} width="40" />
-    <span style={{ fontSize: '16px', marginTop: '4px', textAlign: 'center' }}>
+    <img src={team.logo} alt={team.displayName} width="30" />
+    <span style={{ fontSize: '14px', marginTop: '4px', textAlign: 'center' }}>
       {team.displayName}
     </span>
   </div>

@@ -10,7 +10,7 @@ export const StyledNavbar = styled.nav`
   white-space: nowrap;
   overflow-x: auto;
   width: 100vw;
-  min-height: 75px;
+  min-height: 60px;
   backdrop-filter: blur(6px);
 
   span {
