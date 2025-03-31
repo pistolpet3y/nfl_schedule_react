@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { StyledHeader } from './styles/Header.styled';
-import { StyledSignup } from './styles/Header.styled';
+import { StyledSignup, SignInWindow, Wrapper, StyledHeader } from './styles/Header.styled';
 import NFLShieldBW from '../assets/nfl.shield.bw.png';
 import styled from 'styled-components';
 
@@ -37,15 +36,28 @@ const Navbar: React.FC = () => {
 };
 
 const SignUp: React.FC = () => {
+  const [showSignIn, setShowSignIn] = useState(false);
+
+
   return (
+    <Wrapper>
     <nav className="signup-nav">
-      <StyledSignup>
-        Sign Up
-      </StyledSignup>
-      <StyledSignup>
-        Login
+      <StyledSignup onClick={() => setShowSignIn(!showSignIn)}>
+       <a>Sign In</a>
       </StyledSignup>
     </nav>
+    {showSignIn && (
+      <SignInWindow>
+          <h3>Sign In</h3>
+          <form>
+            <input type="text" id="username" name="username" required placeholder='username'/>
+            <input type="password" id="password" name="password" required  placeholder='password'/>
+            <button type="submit">Submit</button>
+          </form>
+          <p>Don't have an account? <a href="/">Sign up</a></p>
+    </SignInWindow>
+    )}
+    </Wrapper>
   );
 };
 

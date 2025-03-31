@@ -9,6 +9,7 @@ interface Team {
 
 interface Props {
   teams: Team[];
+  onDataFetch: (teams: Team[]) => void;
 }
 
 

@@ -15,29 +15,11 @@ body {
   min-height: 100vh;
   }
 
-body {
-  overflow-x: hidden; 
-  scrollbar-width: thin;
-  scrollbar-color: rgba(142, 197, 252, 0.78) rgba(0, 0, 0, 0.16);
-}
-
-/* Chrome-scrollbars */
-body::-webkit-scrollbar {
-  width: 8px;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(142, 197, 252, 0.78);
-  border-radius: 4px;
-}
-
-
 html, body, #root {
     height: 100%;
     margin: 0;
     padding: 0;
   }
-
-
 
 @font-face {
     font-family: 'BebasFont';
@@ -56,6 +38,7 @@ html, body, #root {
   border: solid 1px rgba(255, 255, 255, 0.29);
   border-radius: 3px;
   color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
 
 .search-field input::placeholder {

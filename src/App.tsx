@@ -48,7 +48,7 @@ const App: React.FC = () => {
       path: '/',
       element: <Layout teams={teams} />,
       children: [
-        { index: true, element: <HomePage teams={teams} /> },
+        { index: true, element: <HomePage teams={teams} onDataFetch={setTeams}/> },
         { path: '/teams', element: <TeamsPage  teams={teams} onDataFetch={setTeams} /> },
       ],
     },
