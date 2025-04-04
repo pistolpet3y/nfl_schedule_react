@@ -10,9 +10,19 @@ interface Team {
   logo: string;
 }
 
-/* interface Props {
-  teams: Team[];
-} */
+interface ApiData {
+  sports: {
+    leagues: {
+      teams: {
+        team: {
+          displayName: string;
+          logos: { href: string }[];
+        };
+      }[];
+    }[];
+  }[];
+}
+
 
 const PageWrapper = styled.div`
   display: flex;
@@ -24,13 +34,31 @@ const MainWrapper = styled.main`
   flex: 1;
 `;
 
-const Layout: React.FC<{ teams: Team[] }> = ({ teams }) => {
+const Layout: React.FC = () => {
+  const [teams,  setTeams ] = React.useState<Team[]>([]);
+
+  
+
+  React.useEffect(() => {
+  fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams')
+    .then((res) => res.json())
+    .then((data: ApiData) => {
+      const formattedTeams = data.sports[0].leagues[0].teams.map((t) => ({
+        displayName: t.team.displayName,
+        logo: t.team.logos[0]?.href || '',
+      }));
+      setTeams(formattedTeams)
+
+    });
+}, []);
+
+
   return (
     <PageWrapper>
       <Header />
       <Navbar teams={teams} />
       <MainWrapper>
-        <Outlet />
+        <Outlet context={teams} />
       </MainWrapper>
       <Footer />
     </PageWrapper>

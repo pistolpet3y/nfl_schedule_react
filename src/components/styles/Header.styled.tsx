@@ -113,7 +113,7 @@ export const SignInWindow = styled.div`
   width: 250px;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(142, 197, 252, 0.62);
+  border-bottom: 5px solid rgba(142, 197, 252, 0.8);
   border-radius: 2px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
   z-index: 100;

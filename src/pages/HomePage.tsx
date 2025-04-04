@@ -1,23 +1,21 @@
-import MainContent from '../components/MainContent';
 import React from 'react';
-/* import { GlobalStyles } from '../components/styles/Global.styled'; */
+import MainContent from '../components/MainContent';
+import { useOutletContext } from "react-router-dom";
 
 interface Team {
   displayName: string;
   logo: string;
 }
 
-interface Props {
-  teams: Team[];
-  onDataFetch: (teams: Team[]) => void;
-}
-
-
-const HomePage: React.FC<Props> = () => {
+const HomePage: React.FC = () => {
+  const teams = useOutletContext<Team[]>();
+  //console loggar för att få bort felmeddelandet från typescript, teams ska användas senare.
+  console.log(teams);
 
   return (
     <>
       <MainContent />
+      
     </>
   );
 };

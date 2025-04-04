@@ -25,6 +25,9 @@ align-items: center;
 padding-left: 10px;
   vertical-align: middle;
 }
+.BuiltWith a {
+text-decoration: none;
+}
 
 
 .SocialMedia img{

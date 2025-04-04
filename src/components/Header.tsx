@@ -15,7 +15,7 @@ const StyledNavLink = styled(NavLink)`
   padding: 1rem;
   margin: 0;
   &.active {
-    color: lightblue;
+    color: rgb(142, 197, 252);
   }
 `;
 

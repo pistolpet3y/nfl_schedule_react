@@ -1,36 +1,31 @@
 import React from 'react';
-/* import TeamsContent from '../components/TeamsContent';  */
+import { useOutletContext } from "react-router-dom";
 import MainContent from '../components/MainContent';
-import { StyledTeamsPage } from '../components/styles/TeamsPage.styled'; 
-
+import { StyledTeamsPage } from '../components/styles/TeamsPage.styled';
 
 interface Team {
   displayName: string;
   logo: string;
-} 
+}
 
-interface Props {
-  teams: Team[];
-  onDataFetch: (teams: Team[]) => void;
-} 
+const TeamsPage: React.FC = () => {
+  const teams = useOutletContext<Team[]>();
 
-const TeamsPage: React.FC<Props> = ({ teams }) => {
   return (
     <>
       <MainContent />
       <StyledTeamsPage>
         <div className="teams-page">
-        {teams.map((team) => (
-        <div key={team.displayName} className="team-card">
-          <img src={team.logo} alt={team.displayName}/>
-          <p>{team.displayName}</p>
+          {teams.map((team) => (
+            <div key={team.displayName} className="team-card">
+              <img src={team.logo} alt={team.displayName} />
+              <p>{team.displayName}</p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
       </StyledTeamsPage>
     </>
   );
-}; 
-
+};
 
 export default TeamsPage;

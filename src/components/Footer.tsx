@@ -14,15 +14,15 @@ export default function Footer() {
   return (
     <StyledFooter>
       <div className="SocialMedia">
-      <img src={images.facebook} alt="Facebook" />
-      <img src={images.instagram} alt="Instagram" />
-      <img src={images.twitter} alt="Twitter" />
-      <img src={images.linkedin} alt="LinkedIn" />
-      <img src={images.youTube} alt="YouTube"  />
+      <a href="https://www.facebook.com/alex.tarverdi" target="_blank"><img src={images.facebook} alt="Facebook" /></a>
+      <a href="https://www.instagram.com/pistolpet3y/" target="_blank"><img src={images.instagram} alt="Instagram" /></a>
+      <a href="https://x.com/NFL" target="_blank"><img src={images.twitter} alt="Twitter" /></a>
+      <a href="https://www.linkedin.com/in/alex-tarverdi/" target="_blank"><img src={images.linkedin} alt="LinkedIn" /></a>
+      <a href="https://www.youtube.com/@NFL" target="_blank"><img src={images.youTube} alt="YouTube"  /></a>
       </div>
       <p>© 2025 Alex, Inc. All rights reserved.</p>
       <span className="BuiltWith">
-      <p>Built with <img src={images.react} alt="react" width={30}/></p>
+      <a href="https://react.dev/" target="_blank"><p>Built with <img src={images.react} alt="react" width={30}/></p></a>
       </span>
     </StyledFooter>
   );
