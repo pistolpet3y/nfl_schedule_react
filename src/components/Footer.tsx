@@ -1,4 +1,5 @@
 import { StyledFooter } from "./styles/Footer.styled";
+import BackgroundChanger from "./BackgroundChanger";
 
 const images = {
   facebook: new URL('../assets/f.png', import.meta.url).href,
@@ -12,7 +13,9 @@ const images = {
 
 export default function Footer() {
   return (
+    <>
     <StyledFooter>
+      <BackgroundChanger />
       <div className="SocialMedia">
       <a href="https://www.facebook.com/alex.tarverdi" target="_blank"><img src={images.facebook} alt="Facebook" /></a>
       <a href="https://www.instagram.com/pistolpet3y/" target="_blank"><img src={images.instagram} alt="Instagram" /></a>
@@ -25,5 +28,6 @@ export default function Footer() {
       <a href="https://react.dev/" target="_blank"><p>Built with <img src={images.react} alt="react" width={30}/></p></a>
       </span>
     </StyledFooter>
+    </>
   );
 }

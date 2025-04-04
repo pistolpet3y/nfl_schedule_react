@@ -4,7 +4,6 @@ import Header from './Header';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import styled from 'styled-components';
-import BackgroundChanger from './BackgroundChanger';
 
 interface Team {
   displayName: string;
@@ -59,8 +58,9 @@ const Layout: React.FC = () => {
       <Navbar teams={teams} />
       <MainWrapper>
         <Outlet context={teams} />
-        <BackgroundChanger />
+        
       </MainWrapper>
+      
       <Footer />
     </PageWrapper>
   );
