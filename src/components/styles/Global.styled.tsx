@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import BebasFont from "../../assets/fonts/BebasNeue-Regular.ttf";
-import background from '../../assets/background.jpg';
+import background from '../../assets/background1.jpg';
 
 export const GlobalStyles = createGlobalStyle`
 body {
