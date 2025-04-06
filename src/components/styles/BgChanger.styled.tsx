@@ -17,6 +17,7 @@ export const StyledBgChanger =styled.div`
     text-shadow: rebeccapurple 0 0 10px;
     animation: glow 2s infinite;
     color: white;
+    font-size: 18px;
 }
 
 @keyframes glow {

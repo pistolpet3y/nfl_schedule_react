@@ -33,6 +33,9 @@ img {
   margin-left: 3rem;
 }
 
+.loginBtn{
+  background-color: rgba(142, 197, 252, 0.8);
+  }
 
 nav {
   display: flex;
@@ -110,11 +113,116 @@ export const SignInWindow = styled.div`
   position: absolute;
   top: 60px; 
   right: 0;
-  width: 250px;
+  width: 270px;
   padding: 1rem;
+  padding-left: 2rem;
   background-color: rgba(0, 0, 0, 0.6);
   border-bottom: 5px solid rgba(142, 197, 252, 0.8);
   border-radius: 2px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
   z-index: 100;
+
+
+
+.button-24 {
+  background:rgb(66, 186, 255);
+  border: 1px solid rgba(219, 237, 255, 0.47);
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-family: "BebasFont", sans-serif;
+  letter-spacing: 0.14rem;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  min-height: 20px;
+  outline: 0;
+  padding: 3px 10px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: rgb(142, 197, 252);
+  border: 1px solid rgb(219, 237, 255);
+  background-position: 0 0;
+  color: white;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+`;
+
+export const ModalBackground = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  zIndex: 1000;
+`;
+
+
+export const ModalWindow = styled.div`
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 300px;
+  color: white;
+
+
+  .button-24 {
+  background:rgb(66, 186, 255);
+  border: 1px solid rgba(219, 237, 255, 0.47);
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-family: "BebasFont", sans-serif;
+  letter-spacing: 0.14rem;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  min-height: 20px;
+  outline: 0;
+  padding: 3px 10px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: rgb(142, 197, 252);
+  border: 1px solid rgb(219, 237, 255);
+  background-position: 0 0;
+  color: white;
+}
+
+.button-24:active {
+  opacity: .5;
+}
 `;

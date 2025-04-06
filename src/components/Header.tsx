@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { StyledSignup, SignInWindow, Wrapper, StyledHeader } from './styles/Header.styled';
 import NFLShieldBW from '../assets/nfl.shield.bw.png';
 import styled from 'styled-components';
+import { ModalBackground, ModalWindow } from './styles/Header.styled';
 
 const StyledNavLink = styled(NavLink)`
   color: blue;
@@ -37,9 +38,23 @@ const Navbar: React.FC = () => {
 
 const SignUp: React.FC = () => {
   const [showSignIn, setShowSignIn] = useState(false);
-
+  const [showModal, setShowModal] = useState(false);
 
   return (
+    <>
+    {/* Modal för sign up som visar felmeddelande */}
+
+    {showModal && (
+      <ModalBackground>
+        <ModalWindow>
+          <h2>404</h2>
+          <p>This feature is currently under maintenance</p>
+          <button type="submit" className='button-24' onClick={() => setShowModal(false)}>Close</button>
+        </ModalWindow>
+      </ModalBackground>
+    )}
+
+
     <Wrapper>
     <nav className="signup-nav">
       <StyledSignup onClick={() => setShowSignIn(!showSignIn)}>
@@ -52,12 +67,13 @@ const SignUp: React.FC = () => {
           <form>
             <input type="text" id="username" name="username" required placeholder='username'/>
             <input type="password" id="password" name="password" required  placeholder='password'/>
-            <button type="submit">Submit</button>
+            <button type="submit" className='button-24'>SIGN IN</button>
           </form>
-          <p>Don't have an account? <a href="/">Sign up</a></p>
+          <p>Don't have an account? <a href="#" onClick={(e) => { e.preventDefault(); setShowModal(true); }}>Sign up</a></p>
     </SignInWindow>
     )}
     </Wrapper>
+    </>
   );
 };
 

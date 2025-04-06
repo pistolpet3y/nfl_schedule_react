@@ -1,5 +1,6 @@
 import { StyledFooter } from "./styles/Footer.styled";
 import BackgroundChanger from "./BackgroundChanger";
+import { useLocation } from "react-router-dom";
 
 const images = {
   facebook: new URL('../assets/f.png', import.meta.url).href,
@@ -8,14 +9,22 @@ const images = {
   linkedin: new URL('../assets/in.png', import.meta.url).href,
   youTube: new URL('../assets/yt.png', import.meta.url).href,
   react: new URL('../assets/react.png', import.meta.url).href,
+  arrow: new URL('../assets/arrow.png', import.meta.url).href,
 };
 
 
+
+
 export default function Footer() {
+  const location = useLocation();
+  const isTeamsPage = location.pathname === "/teams";
+
   return (
     <>
     <StyledFooter>
+      {!isTeamsPage && (
       <BackgroundChanger />
+      )}
       <div className="SocialMedia">
       <a href="https://www.facebook.com/alex.tarverdi" target="_blank"><img src={images.facebook} alt="Facebook" /></a>
       <a href="https://www.instagram.com/pistolpet3y/" target="_blank"><img src={images.instagram} alt="Instagram" /></a>
