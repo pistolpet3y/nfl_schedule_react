@@ -21,68 +21,66 @@ export const StyledHeader  =styled.header`
     font-size: 3rem;
     letter-spacing: 0.14rem;
     margin: 0; 
-}
-.header {
-  display: flex; 
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-img {
-  margin-left: 3rem;
-}
-
-.loginBtn{
-  background-color: rgba(142, 197, 252, 0.8);
   }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  padding-left: 2rem;
-}
-
-.main-nav {
-  display: flex;
-  flex-direction: row;
-  width: 100%; 
-  padding-left: 2rem;
-  white-space: nowrap;
-}
-
-.signup-nav {
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  white-space: nowrap;
-  padding-right: 2rem;
-}
-
-
-ul {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  padding-left: 2rem;
-  margin: 0;
+  .header {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 
- h3 {
-  font-family: 'BebasFont', sans-serif; 
-  color: white;
-  font-size: 1.5rem;
-  margin: 0;
-} 
+  img {
+    margin-left: 3rem;
+  }
 
-li {
-  font-family: 'BebasFont', sans-serif; 
-  color: white;
-  font-size: 1.5rem;
-  padding: 1rem;
-  margin: 0;
-  list-style-type: none;
-}
+  nav {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2rem;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    padding-left: 2rem;
+    white-space: nowrap;
+  }
+
+  .signup-nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    white-space: nowrap;
+    padding-right: 2rem;
+  }
+
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 2rem;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: 'BebasFont', sans-serif; 
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+  } 
+
+  li {
+    font-family: 'BebasFont', sans-serif; 
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+    list-style-type: none;
+  }
+
   a {
     font-family: 'BebasFont', sans-serif;
     color: white;
@@ -120,49 +118,48 @@ export const SignInWindow = styled.div`
   border-bottom: 5px solid rgba(142, 197, 252, 0.8);
   border-radius: 2px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-  z-index: 100;
+  z-index: 1;
 
 
 
-.button-24 {
-  background:rgb(66, 186, 255);
-  border: 1px solid rgba(219, 237, 255, 0.47);
-  border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  font-family: "BebasFont", sans-serif;
-  letter-spacing: 0.14rem;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
-  min-height: 20px;
-  outline: 0;
-  padding: 3px 10px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  margin-top: 10px;
-}
+  .button-24 {
+    background:rgb(66, 186, 255);
+    border: 1px solid rgba(219, 237, 255, 0.47);
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-family: "BebasFont", sans-serif;
+    letter-spacing: 0.14rem;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    min-height: 20px;
+    outline: 0;
+    padding: 3px 10px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    margin-top: 10px;
+  }
 
-.button-24:hover,
-.button-24:active {
-  background-color: rgb(142, 197, 252);
-  border: 1px solid rgb(219, 237, 255);
-  background-position: 0 0;
-  color: white;
-}
+  .button-24:hover,
+  .button-24:active {
+    background-color: rgb(142, 197, 252);
+    border: 1px solid rgb(219, 237, 255);
+    background-position: 0 0;
+    color: white;
+  }
 
-.button-24:active {
-  opacity: .5;
-}
-
+  .button-24:active {
+    opacity: .5;
+  }
 `;
 
 export const ModalBackground = styled.div`
@@ -186,6 +183,7 @@ export const ModalWindow = styled.div`
   text-align: center;
   min-width: 300px;
   color: white;
+  border-bottom: 5px solid rgba(142, 197, 252, 0.8);
 
 
   .button-24 {
@@ -214,15 +212,15 @@ export const ModalWindow = styled.div`
   margin-top: 10px;
 }
 
-.button-24:hover,
-.button-24:active {
-  background-color: rgb(142, 197, 252);
-  border: 1px solid rgb(219, 237, 255);
-  background-position: 0 0;
-  color: white;
-}
+  .button-24:hover,
+  .button-24:active {
+    background-color: rgb(142, 197, 252);
+    border: 1px solid rgb(219, 237, 255);
+    background-position: 0 0;
+    color: white;
+  }
 
-.button-24:active {
-  opacity: .5;
-}
+  .button-24:active {
+    opacity: .5;
+  }
 `;

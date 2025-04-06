@@ -21,7 +21,7 @@ const [searchTerm, setSearchTerm] = useState('');
 
 const filteredTeams = useMemo(() => {
   return teams.filter((team) => {
-   return team.displayName.toLowerCase().includes(searchTerm.toLowerCase());
+  return team.displayName.toLowerCase().includes(searchTerm.toLowerCase());
   });
 }, [teams, searchTerm]);
 
